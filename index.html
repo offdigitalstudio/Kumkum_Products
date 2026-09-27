@@ -709,7 +709,7 @@ function viewReviews() {
 function viewAbout() {
   return shell('/shop', `<main class="wrap narrow"><article class="about"><div class="ballwrap">${ballHTML(120, '#14B8D0', '#7BE0EE')}</div>
     <h1>${esc(ABOUT_US.title)}</h1>${ABOUT_US.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
-    <a class="wa big" target="_blank" rel="noopener" href="${wa(CONFIG.shopWhatsApp, 'Hello Roy Stores!')}">${ico('phone', 20)} Contact us</a></article></main>`, pRev);
+    <a class="wa big" target="_blank" rel="noopener" href="${wa(CONFIG.shopWhatsApp, 'Hello Kumkum Products! I am coming from about section. I am interested in your shop. Can we talk further?')}">${ico('phone', 20)} Contact us</a></article></main>`, pRev);
 }
 
 /* ---- Admin forms ---- */
