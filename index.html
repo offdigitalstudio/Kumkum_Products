@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#F6F4FB">
-<title>Roy Stores</title>
+<title>Kumkum Products</title>
 <link rel="icon" href="Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -581,7 +581,7 @@ function shell(back, inner, extra = '', fabHTML = '', title = CONFIG.shopName) {
 function viewHome() {
   const page = document.createElement('section'); page.className = 'home';
   let idx = 0;
-  const letters = 'Welcome To Roy Stores'.split(' ').map(w => `<span class="w">${[...w].map(ch => `<span class="l" style="--i:${idx++}" aria-hidden="true">${ch}</span>`).join('')}</span>`).join(' ');
+  const letters = 'Welcome To Kumkum Products'.split(' ').map(w => `<span class="w">${[...w].map(ch => `<span class="l" style="--i:${idx++}" aria-hidden="true">${ch}</span>`).join('')}</span>`).join(' ');
   page.innerHTML = `
     <svg class="threads" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#14B8D0"/><stop offset=".55" stop-color="#D6337F"/><stop offset="1" stop-color="#F2A33A"/></linearGradient></defs>
@@ -594,7 +594,7 @@ function viewHome() {
         <span class="orbit"><i style="--c:#14B8D0;top:-7px;left:50%"></i><i style="--c:#D6337F;bottom:12%;right:-7px"></i><i style="--c:#F2A33A;bottom:-7px;left:22%"></i></span>
         <div class="logo-card" id="logoCard"><img src="${esc(CONFIG.logo)}" alt="Logo" width="300" height="300"></div>
       </div></div>
-      <h1 class="welcome" aria-label="Welcome To Roy Stores">${letters}</h1>
+      <h1 class="welcome" aria-label="Welcome To Kumkum Products">${letters}</h1>
       <svg class="squig" viewBox="0 0 220 16" aria-hidden="true"><defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#14B8D0"/><stop offset=".5" stop-color="#D6337F"/><stop offset="1" stop-color="#F2A33A"/></linearGradient></defs><path pathLength="1" stroke="url(#sg)" d="M4 9 Q 22 -1 40 9 T 76 9 T 112 9 T 148 9 T 184 9 T 216 9"/></svg>
       <button class="cta" id="goShop"><span class="shine"></span><span>Continue Shopping</span><span class="arr" aria-hidden="true">→</span></button>
     </div>
