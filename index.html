@@ -305,40 +305,29 @@ button.slot:hover{border-color:var(--blue);color:var(--blue);transform:translate
 </style>
 </head>
 <body>
-<!--
-  ROY STORES — single-file website
-  Files needed in the same folder:  index.html  +  Logo.png  (replace Logo.png any time to change the logo)
 
-  SHARING PRODUCTS WITH ALL VISITORS (one-time setup, free):
-  By default, products and reviews are saved in the browser of the device where the admin adds them.
-  To make them visible to every customer, connect a free Firebase project:
-    1. console.firebase.google.com -> Add project -> Build -> Firestore Database -> Create database
-    2. Project settings -> Your apps -> Web (</>) -> copy the firebaseConfig values
-    3. Paste them into CONFIG.firebase below
-    4. Firestore -> Rules -> allow read, write: if true;   -> Publish
--->
 <div id="bg" aria-hidden="true"></div>
 <main id="app"></main>
 <div id="toasts" aria-live="polite"></div>
-<noscript><p style="padding:24px;text-align:center">Please turn on JavaScript to use Roy Stores.</p></noscript>
+<noscript><p style="padding:24px;text-align:center">Please turn on JavaScript to use Kumkum Products.</p></noscript>
 
 <script>
 /* =====================================================================
    SETTINGS  (edit these)
    ===================================================================== */
 const CONFIG = {
-  shopName: "Roy Stores",
+  shopName: "Kumkum Products",
   logo: "Logo.png",                         // change the logo by replacing this file
-  admin: { id: "Joy Roy", password: "Joy@732122" },
-  shopWhatsApp: "918170047325",             // "Contact us" on products (with country code, no +)
+  admin: { id: "Koyel Barman", password: "Koyel@9907" },
+  shopWhatsApp: "919907241492",             // "Contact us" on products (with country code, no +)
   studioWhatsApp: "918653414799",           // "Contact" button in the footer
-  limits: { products: 2000, reviews: 10000 },
+  limits: { products: 50000, reviews: 1000000 },
   firebase: { apiKey: "AIzaSyCxtiU3QstEtQvjB7xFDs51zBto6H0W2So", authDomain: "database-25bcf.firebaseapp.com", projectId: "database-25bcf", storageBucket: "database-25bcf.firebasestorage.app", messagingSenderId: "739193096200", appId: "1:739193096200:web:16201a73ec7f7c567be9bd" }                           // paste your Firebase config here, e.g. { apiKey:"...", authDomain:"...", projectId:"...", appId:"..." }
 };
 
 /* ABOUT US — edit this text whenever you like. Each line becomes one paragraph. */
 const ABOUT_US = {
-  title: "About Roy Stores",
+  title: "About Kumkum Products",
   paragraphs: [
     "Roy Stores is a small handmade shop. Every piece is made with soft wool, patient hands and a lot of care.",
     "From everyday woollens to thoughtful gifts, each item is crafted one stitch at a time. Message us on WhatsApp any time to ask about a product."
@@ -367,7 +356,7 @@ const ICONS = {
 };
 const ico = (n, s = 20) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
 const wa = (num, msg) => `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
-const waProduct = name => wa(CONFIG.shopWhatsApp, `Hello Roy Stores! I am interested in this product: ${name}`);
+const waProduct = name => wa(CONFIG.shopWhatsApp, `Hello Kumkum Products! I am interested in this product: ${name}`);
 const priceTxt = p => p.price ? `₹${esc(p.price)}` : 'Ask for price';
 const isAdmin = () => sessionStorage.getItem('rs_admin') === '1';
 
